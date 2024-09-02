@@ -1,0 +1,89 @@
+/* index.css */
+@keyframes fillEffect {
+  from {
+    background-position: 0%;
+  }
+  to {
+    background-position: 100%;
+  }
+}
+
+.fill-hover {
+  position: relative;
+  overflow: hidden;
+  color: white; /* Text color */
+}
+
+.fill-hover::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #60A61B; /* Fill color */
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.5s ease;
+  z-index: 0;
+}
+
+.fill-hover:hover::before {
+  transform: scaleX(1);
+}
+
+.fill-hover span {
+  position: relative;
+  z-index: 1;
+}
+
+
+.n{
+  justify-content:space-between;
+   display: flex;
+ }
+ 
+ 
+ 
+ 
+ 
+ @media (max-width: 640px) {
+   .na {
+     display:none}
+ 
+ .c { background:red;
+   width:240px; height:1200px;
+   position: absolute; 
+ 
+  
+   margin-top: 3px;
+      }
+ 
+       li{ align-items: center;
+     padding: 10px;
+   margin-top: 20px;
+ /* background: blue; */
+ 
+ align-items: center;
+ align-content: center;
+ text-align: center;}
+ }
+ 
+ /*  on tablets */
+ @media (min-width: 640px) {
+  
+ }
+ 
+ /* Laptop and Larger Devices */
+ @media (min-width: 1024px) {
+   .item {
+     flex: 1 1 calc(25% - 20px); /* Four columns on laptops */
+   }
+ }
+ 
+ /* Phone Devices Only */
+ @media (max-width: 639px) {
+   .item {
+     flex: 1 1 100%; /* Single column on phones */
+   }
+ }
